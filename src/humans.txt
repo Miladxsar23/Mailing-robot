@@ -1,0 +1,12 @@
+/* TEAM */
+	Fullstack developer:Milad shiriyan Dehkordi
+	Contact: milad.xsar72@gmail.com
+	github: https://github.com/Miladxsar23
+	From:Iran, shahrekord
+
+/* THANKS */
+    Eloquent js book : Marijn Haverbeke
+    website : https://eloquentjavascript.net/
+
+/* TECHNOLOGY COLOPHON */
+Html, Scss, javascript   
