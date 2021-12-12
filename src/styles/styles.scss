@@ -1,0 +1,63 @@
+@import './normalize';
+@import './variables';
+@import './mixins';
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+// global style
+body {
+  font-family : 'Alata';
+  background : $secondary-color;
+  overflow-x : hidden;
+  font-family: 16px;
+}
+
+// header style
+.header {
+  width : 100%;
+  height: 4rem;
+  background : $primary-color;
+  text-align : center;
+  color : $text-color;
+  padding : 12px;
+}
+
+// main style
+.box {
+  @include flex(row, wrap, center, center);
+  width : 100%;
+  padding: 20px;
+}
+
+.main {
+  width : 80%;
+  min-width: 400px;
+  height : 400px;
+  @include flex(row, wrap, center, center);
+  background: #fff;
+
+  &-village {
+    @include flex(row, nowrap, center, center);
+    flex : 1 1 0px;
+    height : 400px;
+    &-wrapper {
+      position: relative;
+      height : 300px;
+    }
+  }
+  &-information {
+    flex : 1 1 0px;
+    height: 400px;
+    background : #999999;
+  }
+}
+
+.robot {
+  width : 50px;
+  height : 50px;
+  background: red;
+  position : absolute;
+}
+
+
+
+

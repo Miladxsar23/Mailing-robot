@@ -1,0 +1,7 @@
+/* all operations */
+@mixin flex($t, $w, $j, $a) {
+  display: flex;
+  flex-flow : $t $w;
+  justify-content: $j;
+  align-items: $a;
+}
