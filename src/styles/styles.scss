@@ -25,6 +25,7 @@ body {
 .box {
   @include flex(row, wrap, center, center);
   width : 100%;
+  margin-top : 20px;
   padding: 20px;
 }
 
@@ -46,18 +47,83 @@ body {
   }
   &-information {
     flex : 1 1 0px;
+    @include flex(column, nowrap, start, start);
     height: 400px;
-    background : #999999;
+    background: $inf-bg-color;
+    color: $inf-text-color;
+    transform: scale(1.03);
+    box-shadow: 0px 0px 30px #b5b1b1;
+    &-state{
+      width : 100%;
+      text-align: center;
+      @include flex(column, nowrap, start, center);
+      flex : 1 1 0px;
+      padding : $inf-padding-x 3*$inf-padding-y;
+    }
+
+    &-robot {
+      width: 100%;
+      padding : $inf-padding-x 3*$inf-padding-y;
+      @include flex(row, wrap, center, center);
+      flex : 1 1 0px;
+      &-select {
+        width: 30%;
+        height: 30px;
+        background: transparent;
+        color: $inf-text-color;
+        border-radius: 3px;
+        border: 1px solid $inf-text-color;
+      }
+      & label {
+        margin-right : 10px;
+      }
+    }
+    &-add {
+      width: 100%;
+      flex : 1 1 0px;
+      padding : $inf-padding-x 3*$inf-padding-y;
+      @include flex(row, wrap, center, center);
+      &-select {
+        width: 120px;
+        height: 30px;
+        margin-right : 10px;
+        background: transparent;
+        color: $inf-text-color;
+        border-radius: 3px;
+        border: 1px solid $inf-text-color;
+      }
+    }
+    &-controler {
+      width: 100%;
+      flex : 1 1 0px;
+      padding : $inf-padding-x 3*$inf-padding-y;
+      @include flex(row, wrap, center, center);
+    }
   }
 }
 
-.robot {
-  width : 50px;
-  height : 50px;
-  background: red;
+.packet {
+  width : 16px;
+  height : 16px;
   position : absolute;
+  transition: all 0.4a;
+}
+.robotElt {
+  position: absolute;
+  transition: all 0.4s;
 }
 
-
+.btn {
+  padding : 5px 10px;
+  background : transparent;
+  border : 1px solid $inf-text-color;
+  color: $inf-text-color;
+  transition : all 0.4s;
+  cursor : pointer;
+  &:hover {
+    background : $inf-text-color;
+    color : white;
+  }
+}
 
 

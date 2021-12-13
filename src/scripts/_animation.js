@@ -1,6 +1,5 @@
 "use strict"
 
-import { format } from "util";
 
 // place positions
 const places = {
@@ -19,15 +18,11 @@ const places = {
 const placeKeys = Object.keys(places)
 const speed = 2;
 
-function getCurrentPlace(imgEl, placeKeys) {
+function getCurrentPlace(imgEl, target) {
   const yOffset = imgEl.offsetTop;
   const xOffset = imgEl.offsetLeft;
-  const realPosition = Object.create(null);
-  for (let p of placeKeys) {
-    let { x, y } = places[p]
-    realPosition[p] = { x: x + xOffset, y: y + yOffset }
-  }
-  return realPosition;
+  let { x, y } = places[target];
+  return { x: x + xOffset, y: y + yOffset }
 }
 
 // helper function for create dom elements
@@ -43,8 +38,25 @@ function elt(type, props, ...childrens) {
 
 // Animation class
 class Animation {
-  constructor({place, packats}) {
-    this.place = place;
-    this.packats = packats;
+  constructor(worldState, robot, robotMemory) {
+    this.worldState = worldState;
+    this.robot = robot;
+    this.robotMemory = robotMemory;
+    this.turn = 0;
+    this.node = document.querySelector(".main-village-wrapper");
+    this.villageImageEl = document.querySelector(".main-village-wrapper-img");
+    const robotEl = elt("div", { className: "robotElt" }, elt("img", {src:"../assets/robot_moving2x.gif"}))
+    this.robotEl = robotEl;
+    this.packets = [];
+    this.node.appendChild(this.robotEl);
+
+    this.updateView();
+  }
+
+  updateView() {
+    this.robotEl.style.top = `${getCurrentPlace(this.villageImageEl, this.worldState.place).y - 38}px`;
+    this.robotEl.style.left = `${getCurrentPlace(this.villageImageEl, this.worldState.place).x - 16}px`;
   }
 }
+
+exports.Animation = Animation;

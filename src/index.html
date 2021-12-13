@@ -26,10 +26,60 @@
       <div class="main">
         <div class="main-village">
           <div class="main-village-wrapper">
-            <img src="./assets/village2x.png" alt="village image" />
+            <img class="main-village-wrapper-img" src="./assets/village2x.png" alt="village image" />
           </div>
         </div>
-        <div class="main-information"></div>
+        <div class="main-information">
+          <div class="main-information-state">
+            <div class="main-information-state-work"></div>
+            <div class="main-information-state-curret"></div>
+          </div>
+          <div class="main-information-robot">
+            <label>type of Robot:</label>
+            <select class="main-information-robot-select" name="robot">
+              <option value="gpsRobot">gps</option>
+              <option value="routeRobot">route</option>
+              <option value="random">random</option>
+            </select>
+          </div>
+          <div class="main-information-add">
+            <form class="main-information-add-form">
+              <label>from: </label>
+              <select class="main-information-add-select" name="from">
+                <option value="Alice's House">A</option>
+                <option value="Bob's House">B</option>
+                <option value="Cabin">C</option>
+                <option value="Daria's House">D</option>
+                <option value="Ernie's House">E</option>
+                <option value="Farm">F</option>
+                <option value="Grete's House">G</option>
+                <option value="Marketplace">M</option>
+                <option value="Post Office">P</option>
+                <option value="Shop">S</option>
+                <option value="Town Hall">F</option>
+              </select>
+              <label>to: </label>
+              <select class="main-information-add-select" name="to">
+                <option value="Alice's House">A</option>
+                <option value="Bob's House">B</option>
+                <option value="Cabin">C</option>
+                <option value="Daria's House">D</option>
+                <option value="Ernie's House">E</option>
+                <option value="Farm">F</option>
+                <option value="Grete's House">G</option>
+                <option value="Marketplace">M</option>
+                <option value="Post Office">P</option>
+                <option value="Shop">S</option>
+                <option value="Town Hall">F</option>
+              </select>
+              <button type="submit" class="btn btn-add">Add Packet</button>
+            </form>
+          </div>
+          <div class="main-information-controler">
+            <button type="button" class="btn btn-start">start</button>
+            <button type="button" class="btn btn-stop">stop</button>
+          </div>
+        </div>
       </div>
     </div>
   </main>
