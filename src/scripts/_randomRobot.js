@@ -5,8 +5,8 @@ function randomPick(array) {
   return array[item]
 }
 
-function randomRobot(state) {
-  return { direction: randomPick(_graphRoad[state.place]) };
+function randomRobot(state, memory) {
+  return { direction: randomPick(_graphRoad[state.place]), memory : [] };
 }
 
 exports.random = {randomRobot, randomPick};

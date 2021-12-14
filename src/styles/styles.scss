@@ -15,9 +15,9 @@ body {
 .header {
   width : 100%;
   height: 4rem;
-  background : $primary-color;
+  background : $header-bg-color;
   text-align : center;
-  color : $text-color;
+  color : $header-text-color;
   padding : 12px;
 }
 
@@ -49,10 +49,14 @@ body {
     flex : 1 1 0px;
     @include flex(column, nowrap, start, start);
     height: 400px;
+    min-width: 490px;
     background: $inf-bg-color;
     color: $inf-text-color;
     transform: scale(1.03);
     box-shadow: 0px 0px 30px #b5b1b1;
+    @media screen and (max-width : 576px) {
+      min-width: 100%;
+    }
     &-state{
       width : 100%;
       text-align: center;
@@ -106,7 +110,8 @@ body {
   width : 16px;
   height : 16px;
   position : absolute;
-  transition: all 0.4a;
+  transition: all 0.4s;
+  background-image: url("../assets/parcel.png");
 }
 .robotElt {
   position: absolute;
@@ -123,6 +128,11 @@ body {
   &:hover {
     background : $inf-text-color;
     color : white;
+  }
+  @media screen and (max-width : 576px) {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
   }
 }
 
