@@ -103,6 +103,7 @@ class Animation {
         this.work.textContent = "mission complete!";
         this.robotEl.firstChild.src = "../assets/robot_idle.png";
         this.timeout = null;
+        this.turn = 0;
       }else {
         this.schedule();
         this.robotEl.firstChild.src = "../assets/robot_moving2x.gif";

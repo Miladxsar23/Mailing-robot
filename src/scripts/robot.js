@@ -1,3 +1,4 @@
+"use strict"
 const {_graphRoad} = require('./_createGraph').getGraph;
 const {VillageState} = require('./_villageState.class.js');
 const {runRobot} = require('./_runRobot');

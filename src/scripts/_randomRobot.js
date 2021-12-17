@@ -1,3 +1,4 @@
+"use strict"
 const {_graphRoad} = require('./_createGraph').getGraph;
 /* create a random robot -> first way  */
 function randomPick(array) {

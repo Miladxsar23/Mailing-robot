@@ -1,3 +1,4 @@
+"use strict"
 const {_graphRoad} = require('./_createGraph').getGraph;
 /* third way -> GPS robot */
 function findRoute(from, to, graph) {

@@ -1,3 +1,4 @@
+"use strict"
 const {randomPick} = require('./_randomRobot').random;
 const {_graphRoad} = require('./_createGraph').getGraph;
 /* create a VillageState class for control state of village */
